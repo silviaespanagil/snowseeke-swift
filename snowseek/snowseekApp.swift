@@ -11,7 +11,7 @@ import SwiftUI
 struct snowseekApp: App {
     var body: some Scene {
         WindowGroup {
-            ContentView()
+            ResortView()
         }
     }
 }
