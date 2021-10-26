@@ -14,6 +14,7 @@ struct ResortView: View {
     var body: some View {
         
         NavigationView {
+            
             List(resorts) { resort in
                 NavigationLink(destination: Text(resort.name)) {
                     Image(resort.country)
@@ -29,6 +30,7 @@ struct ResortView: View {
                         )
 
                     VStack(alignment: .leading) {
+                        
                         Text(resort.name)
                             .font(.headline)
                         Text("\(resort.runs) runs")
@@ -37,6 +39,8 @@ struct ResortView: View {
                 }
             }
             .navigationBarTitle("Resorts")
+            
+            WelcomeView()
         }
     }
 }
