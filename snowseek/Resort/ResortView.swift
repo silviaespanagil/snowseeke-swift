@@ -16,7 +16,8 @@ struct ResortView: View {
         NavigationView {
             
             List(resorts) { resort in
-                NavigationLink(destination: Text(resort.name)) {
+                
+                NavigationLink(destination: ResortDetail(resort: resort)) {
                     Image(resort.country)
                         .resizable()
                         .scaledToFill()
