@@ -15,6 +15,7 @@
 		A7B001B027284D5500D4874D /* Bundle-Decodable.swift in Sources */ = {isa = PBXBuildFile; fileRef = A7B001AF27284D5500D4874D /* Bundle-Decodable.swift */; };
 		A7B001B227284E0600D4874D /* ResortView.swift in Sources */ = {isa = PBXBuildFile; fileRef = A7B001B127284E0600D4874D /* ResortView.swift */; };
 		A7B001B5272851F200D4874D /* WelcomeView.swift in Sources */ = {isa = PBXBuildFile; fileRef = A7B001B4272851F200D4874D /* WelcomeView.swift */; };
+		A7B001B82728540400D4874D /* ResortDetail.swift in Sources */ = {isa = PBXBuildFile; fileRef = A7B001B72728540400D4874D /* ResortDetail.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -27,6 +28,7 @@
 		A7B001AF27284D5500D4874D /* Bundle-Decodable.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "Bundle-Decodable.swift"; sourceTree = "<group>"; };
 		A7B001B127284E0600D4874D /* ResortView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ResortView.swift; sourceTree = "<group>"; };
 		A7B001B4272851F200D4874D /* WelcomeView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WelcomeView.swift; sourceTree = "<group>"; };
+		A7B001B72728540400D4874D /* ResortDetail.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ResortDetail.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -59,6 +61,7 @@
 		A7B00197272832F200D4874D /* snowseek */ = {
 			isa = PBXGroup;
 			children = (
+				A7B001B6272853F400D4874D /* ResortDetail */,
 				A7B001B3272851DB00D4874D /* Welcome */,
 				A7B001AA27284BE500D4874D /* Resort */,
 				A7B00198272832F200D4874D /* snowseekApp.swift */,
@@ -93,6 +96,14 @@
 				A7B001B4272851F200D4874D /* WelcomeView.swift */,
 			);
 			path = Welcome;
+			sourceTree = "<group>";
+		};
+		A7B001B6272853F400D4874D /* ResortDetail */ = {
+			isa = PBXGroup;
+			children = (
+				A7B001B72728540400D4874D /* ResortDetail.swift */,
+			);
+			path = ResortDetail;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -169,6 +180,7 @@
 				A7B001B5272851F200D4874D /* WelcomeView.swift in Sources */,
 				A7B00199272832F200D4874D /* snowseekApp.swift in Sources */,
 				A7B001B227284E0600D4874D /* ResortView.swift in Sources */,
+				A7B001B82728540400D4874D /* ResortDetail.swift in Sources */,
 				A7B001AE27284C2500D4874D /* ResortViewModel.swift in Sources */,
 				A7B001B027284D5500D4874D /* Bundle-Decodable.swift in Sources */,
 			);

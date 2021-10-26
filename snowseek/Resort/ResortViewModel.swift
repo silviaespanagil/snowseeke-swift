@@ -22,6 +22,6 @@ import SwiftUI
         let facilities: [String]
         
         static let allResorts: [Resort] = Bundle.main.decode("resorts.json")
-
+        static let example = allResorts[0]
     }
 
