@@ -8,17 +8,19 @@
 
 /* Begin PBXBuildFile section */
 		A7B00199272832F200D4874D /* snowseekApp.swift in Sources */ = {isa = PBXBuildFile; fileRef = A7B00198272832F200D4874D /* snowseekApp.swift */; };
-		A7B0019B272832F200D4874D /* ContentView.swift in Sources */ = {isa = PBXBuildFile; fileRef = A7B0019A272832F200D4874D /* ContentView.swift */; };
-		A7B0019D272832F500D4874D /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = A7B0019C272832F500D4874D /* Assets.xcassets */; };
 		A7B001A0272832F500D4874D /* Preview Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = A7B0019F272832F500D4874D /* Preview Assets.xcassets */; };
+		A7B001A727284B0E00D4874D /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = A7B001A627284B0E00D4874D /* Assets.xcassets */; };
+		A7B001A927284B1900D4874D /* resorts.json in Resources */ = {isa = PBXBuildFile; fileRef = A7B001A827284B1900D4874D /* resorts.json */; };
+		A7B001AE27284C2500D4874D /* ResortViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = A7B001AD27284C2500D4874D /* ResortViewModel.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
 		A7B00195272832F200D4874D /* snowseek.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = snowseek.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		A7B00198272832F200D4874D /* snowseekApp.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = snowseekApp.swift; sourceTree = "<group>"; };
-		A7B0019A272832F200D4874D /* ContentView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ContentView.swift; sourceTree = "<group>"; };
-		A7B0019C272832F500D4874D /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		A7B0019F272832F500D4874D /* Preview Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = "Preview Assets.xcassets"; sourceTree = "<group>"; };
+		A7B001A627284B0E00D4874D /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
+		A7B001A827284B1900D4874D /* resorts.json */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.json; path = resorts.json; sourceTree = "<group>"; };
+		A7B001AD27284C2500D4874D /* ResortViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ResortViewModel.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -51,9 +53,10 @@
 		A7B00197272832F200D4874D /* snowseek */ = {
 			isa = PBXGroup;
 			children = (
+				A7B001AA27284BE500D4874D /* Resort */,
 				A7B00198272832F200D4874D /* snowseekApp.swift */,
-				A7B0019A272832F200D4874D /* ContentView.swift */,
-				A7B0019C272832F500D4874D /* Assets.xcassets */,
+				A7B001A627284B0E00D4874D /* Assets.xcassets */,
+				A7B001A827284B1900D4874D /* resorts.json */,
 				A7B0019E272832F500D4874D /* Preview Content */,
 			);
 			path = snowseek;
@@ -65,6 +68,14 @@
 				A7B0019F272832F500D4874D /* Preview Assets.xcassets */,
 			);
 			path = "Preview Content";
+			sourceTree = "<group>";
+		};
+		A7B001AA27284BE500D4874D /* Resort */ = {
+			isa = PBXGroup;
+			children = (
+				A7B001AD27284C2500D4874D /* ResortViewModel.swift */,
+			);
+			path = Resort;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -125,8 +136,9 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				A7B001A927284B1900D4874D /* resorts.json in Resources */,
+				A7B001A727284B0E00D4874D /* Assets.xcassets in Resources */,
 				A7B001A0272832F500D4874D /* Preview Assets.xcassets in Resources */,
-				A7B0019D272832F500D4874D /* Assets.xcassets in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -137,8 +149,8 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				A7B0019B272832F200D4874D /* ContentView.swift in Sources */,
 				A7B00199272832F200D4874D /* snowseekApp.swift in Sources */,
+				A7B001AE27284C2500D4874D /* ResortViewModel.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
