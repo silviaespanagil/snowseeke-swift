@@ -24,6 +24,18 @@ struct ResortDetail: View {
                         .padding(.vertical)
                         .lineSpacing(10)
                     
+                    HStack {
+                        
+                        Spacer()
+                        
+                        ResortExtraDetails(viewModel: ResortExtraDetailViewModel())
+                        SkiDetailsView(resort: resort)
+                        Spacer()
+                    }
+                    .font(.headline)
+                    .foregroundColor(.secondary)
+                    .padding(.top)
+                    
                     Text("Facilities")
                         .font(.headline)
                     
