@@ -11,6 +11,8 @@ struct ResortView: View {
     
     let resorts: [Resort] = Bundle.main.decode("resorts.json")
     
+    @ObservedObject var favorites = Favorites()
+    
     var body: some View {
         
         NavigationView {
@@ -37,12 +39,19 @@ struct ResortView: View {
                         Text("\(resort.runs) runs")
                             .foregroundColor(.secondary)
                     }
+                    if self.favorites.contains(resort) {
+                        Spacer()
+                        Image(systemName: "heart.fill")
+                        .accessibility(label: Text("This is a favorite resort"))
+                            .foregroundColor(.red)
+                    }
                 }
             }
             .navigationBarTitle("Resorts")
             
             WelcomeView()
         }
+        .environmentObject(favorites)
     }
 }
 

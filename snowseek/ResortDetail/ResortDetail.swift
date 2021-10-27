@@ -16,6 +16,8 @@ struct ResortDetail: View {
     //Will tell if we are ina regular or compact size device
     @Environment(\.horizontalSizeClass) var sizeClass
     
+    @EnvironmentObject var favorites: Favorites
+    
     var body: some View {
         
         ScrollView {
@@ -85,6 +87,14 @@ struct ResortDetail: View {
         .alert(item: $selectedFacility) { facility in
             facility.alert
         }
+        Button(favorites.contains(resort) ? "Remove from Favorites" : "Add to Favorites") {
+            if self.favorites.contains(self.resort) {
+                self.favorites.remove(self.resort)
+            } else {
+                self.favorites.add(self.resort)
+            }
+        }
+        .padding()
     }
 }
 
