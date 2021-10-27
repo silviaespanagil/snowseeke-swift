@@ -49,6 +49,7 @@ struct ResortDetail: View {
                     Text("Facilities")
                         .font(.headline)
                     
+                    //Stringify the facilities array
                     Text(ListFormatter.localizedString(byJoining: resort.facilities))
                     .padding(.vertical)                }
                 .padding(.horizontal)

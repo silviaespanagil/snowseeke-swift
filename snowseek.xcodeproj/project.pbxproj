@@ -19,6 +19,7 @@
 		A7FABC8427285AF20028012E /* SkiDetailsView.swift in Sources */ = {isa = PBXBuildFile; fileRef = A7FABC8327285AF20028012E /* SkiDetailsView.swift */; };
 		A7FABC8927285CBE0028012E /* ResortExtraDetails.swift in Sources */ = {isa = PBXBuildFile; fileRef = A7FABC8827285CBE0028012E /* ResortExtraDetails.swift */; };
 		A7FABC8B27285DA90028012E /* ResortExtraDetailsViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = A7FABC8A27285DA90028012E /* ResortExtraDetailsViewModel.swift */; };
+		A7FABC8F27293D820028012E /* Facility.swift in Sources */ = {isa = PBXBuildFile; fileRef = A7FABC8E27293D820028012E /* Facility.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -35,6 +36,7 @@
 		A7FABC8327285AF20028012E /* SkiDetailsView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SkiDetailsView.swift; sourceTree = "<group>"; };
 		A7FABC8827285CBE0028012E /* ResortExtraDetails.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ResortExtraDetails.swift; sourceTree = "<group>"; };
 		A7FABC8A27285DA90028012E /* ResortExtraDetailsViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ResortExtraDetailsViewModel.swift; sourceTree = "<group>"; };
+		A7FABC8E27293D820028012E /* Facility.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Facility.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -67,6 +69,7 @@
 		A7B00197272832F200D4874D /* snowseek */ = {
 			isa = PBXGroup;
 			children = (
+				A7FABC8E27293D820028012E /* Facility.swift */,
 				A7FABC8727285C5D0028012E /* ResortExtraDetail */,
 				A7FABC8227285AA50028012E /* SkiDetails */,
 				A7B001B6272853F400D4874D /* ResortDetail */,
@@ -125,8 +128,8 @@
 		A7FABC8727285C5D0028012E /* ResortExtraDetail */ = {
 			isa = PBXGroup;
 			children = (
-				A7FABC8827285CBE0028012E /* ResortExtraDetails.swift */,
 				A7FABC8A27285DA90028012E /* ResortExtraDetailsViewModel.swift */,
+				A7FABC8827285CBE0028012E /* ResortExtraDetails.swift */,
 			);
 			path = ResortExtraDetail;
 			sourceTree = "<group>";
@@ -204,6 +207,7 @@
 			files = (
 				A7FABC8B27285DA90028012E /* ResortExtraDetailsViewModel.swift in Sources */,
 				A7B001B5272851F200D4874D /* WelcomeView.swift in Sources */,
+				A7FABC8F27293D820028012E /* Facility.swift in Sources */,
 				A7FABC8427285AF20028012E /* SkiDetailsView.swift in Sources */,
 				A7B00199272832F200D4874D /* snowseekApp.swift in Sources */,
 				A7B001B227284E0600D4874D /* ResortView.swift in Sources */,
