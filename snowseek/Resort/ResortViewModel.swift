@@ -21,6 +21,11 @@ import SwiftUI
         let runs: Int
         let facilities: [String]
         
+        var facilityTypes: [Facility] {
+            facilities.map(Facility.init)
+        }
+        
+
         static let allResorts: [Resort] = Bundle.main.decode("resorts.json")
         static let example = allResorts[0]
     }

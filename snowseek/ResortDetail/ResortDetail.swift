@@ -11,19 +11,23 @@ struct ResortDetail: View {
     
     let resort: Resort
     
-    //Will tell if we are ina regular or compact size device
+    @State private var selectedFacility: Facility?
     
+    //Will tell if we are ina regular or compact size device
     @Environment(\.horizontalSizeClass) var sizeClass
     
     var body: some View {
         
         ScrollView {
+            
             VStack(alignment: .leading, spacing: 0) {
+                
                 Image(decorative: resort.id)
                     .resizable()
                     .scaledToFit()
                 
                 Group {
+                    
                     Text(resort.description)
                         .padding(.vertical)
                         .lineSpacing(10)
@@ -31,11 +35,19 @@ struct ResortDetail: View {
                     HStack {
                         
                         if sizeClass == .compact {
+                            
                             Spacer()
-                            VStack { ResortExtraDetails(viewModel: ResortExtraDetailViewModel())}
-                            VStack { SkiDetailsView(resort: resort) }
+                            VStack {
+                                
+                                ResortExtraDetails(viewModel: ResortExtraDetailViewModel())}
+                            VStack {
+                                
+                                SkiDetailsView(resort: resort) }
+                            
                             Spacer()
+                            
                         } else {
+                            
                             ResortExtraDetails(viewModel: ResortExtraDetailViewModel())
                             Spacer()
                             SkiDetailsView(resort: resort)
@@ -50,12 +62,29 @@ struct ResortDetail: View {
                         .font(.headline)
                     
                     //Stringify the facilities array
-                    Text(ListFormatter.localizedString(byJoining: resort.facilities))
-                    .padding(.vertical)                }
+                    //Text(ListFormatter.localizedString(byJoining: resort.facilities))
+                    
+                    HStack {
+                        ForEach(resort.facilityTypes){
+                            facility in facility.icon
+                                .font(.title)
+                                .onTapGesture{
+                                    self.selectedFacility = facility
+                                }
+                        }
+                        
+                    }
+                    .padding(.vertical)
+                    
+                }
                 .padding(.horizontal)
             }
         }
+        
         .navigationBarTitle(Text("\(resort.name), \(resort.country)"), displayMode: .inline)
+        .alert(item: $selectedFacility) { facility in
+            facility.alert
+        }
     }
 }
 
