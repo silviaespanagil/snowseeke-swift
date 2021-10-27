@@ -11,6 +11,10 @@ struct ResortDetail: View {
     
     let resort: Resort
     
+    //Will tell if we are ina regular or compact size device
+    
+    @Environment(\.horizontalSizeClass) var sizeClass
+    
     var body: some View {
         
         ScrollView {
@@ -26,21 +30,27 @@ struct ResortDetail: View {
                     
                     HStack {
                         
-                        Spacer()
-                        
-                        ResortExtraDetails(viewModel: ResortExtraDetailViewModel())
-                        SkiDetailsView(resort: resort)
-                        Spacer()
+                        if sizeClass == .compact {
+                            Spacer()
+                            VStack { ResortExtraDetails(viewModel: ResortExtraDetailViewModel())}
+                            VStack { SkiDetailsView(resort: resort) }
+                            Spacer()
+                        } else {
+                            ResortExtraDetails(viewModel: ResortExtraDetailViewModel())
+                            Spacer()
+                            SkiDetailsView(resort: resort)
+                        }
                     }
                     .font(.headline)
                     .foregroundColor(.secondary)
                     .padding(.top)
                     
+                    Spacer()
                     Text("Facilities")
                         .font(.headline)
                     
                     Text(ListFormatter.localizedString(byJoining: resort.facilities))
-                        .padding(.vertical)                }
+                    .padding(.vertical)                }
                 .padding(.horizontal)
             }
         }
