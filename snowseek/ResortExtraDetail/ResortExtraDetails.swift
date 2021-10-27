@@ -16,6 +16,7 @@ struct ResortExtraDetails: View {
         VStack {
             
             Text("Size: \(viewModel.resortSize)")
+            Spacer()
             Text("Price: \(viewModel.resortPrice)")
             
         }

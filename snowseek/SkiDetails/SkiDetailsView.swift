@@ -14,6 +14,7 @@ struct SkiDetailsView: View {
     var body: some View {
         VStack {
             Text("Elevation: \(resort.elevation)m")
+            Spacer()
             Text("Snow: \(resort.snowDepth)cm")
         }
     }
