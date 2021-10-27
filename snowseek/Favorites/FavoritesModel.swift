@@ -12,9 +12,6 @@ class Favorites: ObservableObject {
     // the actual resorts the user has favorited
     private var favResorts: Set<String>
 
-    // the key we're using to read/write in UserDefaults
-    private let saveKey = "Favorites"
-
     init() {
         // load our saved data
 
